@@ -1,0 +1,38 @@
+{
+  "short_name": "Nexus",
+  "name": "Nexus Messenger",
+  "description": "AI-powered messaging app with Nova AI",
+  "icons": [
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d0d18",
+  "theme_color": "#534AB7",
+  "categories": ["social", "communication", "productivity"],
+  "shortcuts": [
+    {
+      "name": "New Message",
+      "short_name": "Message",
+      "description": "Start a new conversation",
+      "url": "/?action=new-chat",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Nova AI",
+      "short_name": "Nova",
+      "description": "Chat with Nova AI",
+      "url": "/?chat=nova",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": { "title": "title", "text": "text", "url": "url", "files": [{ "name": "file", "accept": ["image/*", "video/*"] }] }
+  },
+  "prefer_related_applications": false
+}
