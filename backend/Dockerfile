@@ -4,7 +4,7 @@ WORKDIR /home/node/app
 
 # Install dependencies first (caching)
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm install --only=production
 
 # Copy source
 COPY src ./src
