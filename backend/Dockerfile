@@ -4,8 +4,7 @@ WORKDIR /home/node/app
 
 # Install dependencies first (caching)
 COPY package*.json ./
-RUN npm install --omit=dev
---legacy-peer-deps
+RUN npm install --omit=dev --legacy-peer-deps
 
 # Copy source
 COPY src ./src
